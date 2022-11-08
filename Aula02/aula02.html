@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 1 estrutura de dados</title>
+</head>
+<body>
+    <h1>Brincando com numeros</h1>
+    <button onclick="calcular()">clique aqui</button>
+
+    <section id="res">
+        <p>----</p>
+    </section>
+
+    
+    
+    <script>
+        /*
+        var myVariable = 'global';
+        myOtherVariable = 'global';
+        
+        function myFunction() {
+            let myVariable = 'local';
+            return myVariable;
+        }
+
+        function myOtherFunction() {
+            myOtherVariable = 'local';
+            return myOtherVariable;
+        }
+
+        console.log(myVariable);
+        console.log(myFunction());
+        console.log(myOtherVariable);
+        console.log(myOtherFunction); */
+        /* var num = 1;
+        console.log(typeof num);
+        var num;
+        console.log(typeof num);
+        var num = 'jorge';
+        console.log(typeof num);
+        var num = '2';
+        console.log(typeof num);
+        */
+
+        function calcular() {
+            let n1 = Number(window.prompt("Digite um numero: "));
+            let res = document.querySelector('section#res');
+
+            res.innerHTML = `<p>O dobro de ${n1} é ${n1*2} e a metade é
+                 ${n1/2}!</p>`
+        }
+
+    </script>
+</body>
+</html>

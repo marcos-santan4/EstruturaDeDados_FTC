@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    
+</head>
+<body>
+    <header>
+        <h1>📄!!!Aula Array!!!📄</h1>
+    </header>
+
+
+    <div>
+        <button onclick="jogar()">Start</button>
+
+    </div>
+
+    <div>
+        <section id="res" style="color: black;">
+    
+        </section>
+    </div>
+
+
+    <script>
+        let res = document.querySelector('section#res');
+        
+        function jogar() {
+            let tempJan = 32;
+            let tempFev = 34;
+            let tempMar = 33;
+            let tempAbr = 31;
+            let tempMai = 28;
+
+            let mediaTemp = [23, 34, 23, 56, 76, 78];
+
+            mediaTemp[mediaTemp.length] = 89;
+
+            mediaTemp.push(11);
+
+            for(let i=0; i<mediaTemp.length; i++) {
+                res.innerHTML += `${mediaTemp[i]}<br>`;
+            }
+
+        }
+    </script>
+
+</body>
+
+<style>
+    body {
+        background-color: rgb(36, 77, 105);
+        font: normal 15pt Arial;
+        text-align: center;
+        color: white;
+    }
+
+    header {
+    color: white;
+    text-align: center;
+    }
+
+    section {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 350px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.255);
+    }
+
+    section #res {
+        color: black;
+    }
+
+    div {
+        font: normal 15pt montserrat;
+        text-align: center;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 18px;
+        border-radius: 5px;
+        border-color: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.255);
+    }
+
+</style>
+</html>

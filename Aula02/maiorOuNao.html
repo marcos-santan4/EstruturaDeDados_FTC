@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula de Estrutura de Dados 3</title>
+</head>
+<body>
+    <h1>Maior, menor ou igual?</h1>
+
+    <button onclick="teste()">Clique aqui</button>
+
+    <section id = "result">
+        <p>É aqui onde ocorre a mágica!</p>
+    </section>
+    <script>
+        function teste(){
+            let num1 = Number(window.prompt('Digite um número: '));
+            let num2 = Number(window.prompt('Digite outro número: '));
+        
+            let res = document.querySelector('section#result')
+        
+            if (num1 > num2) {
+                res.innerHTML = `<p>${num1} é maior que ${num2} <br> ${num2} é menor que ${num1}</p>`;
+            } else if (num2 > num1) {
+                res.innerHTML = `<p>${num2} é maior que ${num1} <br> ${num1} é menor que ${num2}</p>`;
+            } else {
+                res.innerHTML = `<p>Os numeros são iguais</p>`;
+            }
+        }
+    </script>
+
+</body>
+</html>

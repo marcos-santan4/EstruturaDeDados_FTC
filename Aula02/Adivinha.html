@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    
+</head>
+<body>
+    <header>
+        <h1>🤔!!!Adivinha!!!🤔</h1>
+        <p>Click "start" to try your luck!!</p>
+        <p>Try to enter the same number that the system will report..</p>
+    </header>
+
+
+    <div>
+        <button onclick="verificar()">Start</button>
+
+    </div>
+
+    <div>
+        <section id="res" style="color: black;">
+            <p>-----</p>
+        </section>
+    </div>
+
+
+    <script>
+        function verificar() {
+
+            let n1 = Number(window.prompt('Input a number: '));
+            let n2;
+            let res = document.querySelector('section#res');
+
+        
+            for(let i=0; i<=1; i++) {
+                n2 = Math.trunc(Math.random(i) * 102 - 0)
+            }
+
+            
+
+            if(n1 === n2) {
+                res.innerHTML = `<p> Equal Numbers! <br> <br> Typed Number: ${n1}
+                    <br> <br> Random Number: ${n2}</p>`
+            } else {
+                    if (n1 > n2) {
+                        res.innerHTML = `<p> Different Numbers! <br> <br> Typed Number: ${n1}
+                    <br> <br> Random Number: ${n2} <br> <br> The number typed is higher than the random number.</p>`
+                    } else {
+                        res.innerHTML = ` <p> Different Numbers! <br> <br> Typed Number: ${n1}
+                    <br> <br> Random Number: ${n2} <br> <br> The number typed is less than the random number.</p>`
+                    }
+            }
+
+        }
+    </script>
+
+    <p><a href="https://github.com/Marcos-Santan4" target="_blank" rel="noopener noreferrer" style="color: white;">&copy;Marcos_Santan4</a></p>
+</body>
+
+<style>
+    body {
+        background-color: rgb(36, 77, 105);
+        font: normal 15pt Arial;
+        text-align: center;
+        color: white;
+    }
+
+    header {
+    color: white;
+    text-align: center;
+    }
+
+    section {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 350px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.255);
+    }
+
+    section #res {
+        color: black;
+    }
+
+    div {
+        font: normal 15pt montserrat;
+        text-align: center;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 18px;
+        border-radius: 5px;
+        border-color: white;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.255);
+    }
+
+</style>
+</html>

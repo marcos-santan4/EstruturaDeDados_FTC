@@ -1,0 +1,29 @@
+body {
+    background: #0094C6;
+}
+
+#title {
+    text-align: center;
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#itens {
+    text-align: center;
+    font: normal 15pt montserrat;
+    padding: 10px;
+    background-color: white;
+    border-radius: 1em;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.255);
+}
+
+#copyright, a {
+    text-align: center;
+    color: white;
+}
+
+
+
+
