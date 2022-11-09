@@ -5,39 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <div class="content-title">
-        <h1>SUBSCRIBE</h1>
+        <h1>Contacts</h1>
     </div>
     <div class="content">
-        <div class="input-name">
-            <label for="nome">Enter your name</label>
+        <div class="input" id="input-name">
+            <label for="nome" id="label">Enter name</label>
             <input type="text" id="name">
         </div>
-        <div class="input-email">
-            <label for="email">Enter your e-mail</label>
+        <div class="input" id="input-email">
+            <label for="email" id="label">Enter e-mail</label>
             <input type="email" id="email">
         </div>
-        <div class="input-tel">
-            <label for="tel">Enter your cellphone number</label>
+        <div class="input" id="input-tel">
+            <label for="tel" id="label">Enter phone number</label>
             <input type="text" id="tel">
         </div>
         <div class="buttons">
-            <div class="button-send">
-                <button onclick="add()">Send</button>
-            </div>
-            <div class="button-has">
-                <button onclick="hasKey()">HasKey</button>
-            </div>
+            <button onclick="add()" id="save">Save Contact</button>
+            <button onclick="action()" id="list">Contact list</button>
         </div>
     </div>
+
+    <div class="blur" onclick="action()">
+    </div>
+
+    <div class="modal">
+        <div class="close-window" onclick="closeWindow()"></div>
+        <div class="info">
+            <h1>Contact List</h1>
+            <p id="res">
+                <table id="tabela">
+                    <tr>
+                        <td>Name</td>
+                        <td>E-mail</td>
+                        <td>Number</td>
+                    </tr>
+                </table>
+            </p>
+        </div>
+    </div>
+
     <script src="./assets/js/valuePair.js"></script>
     <script src="./assets/js/map.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/testScript.js"></script>
 
 </body>
+
 </html>

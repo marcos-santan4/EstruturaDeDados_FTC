@@ -4,5 +4,147 @@
 }
 
 body {
-    
+    font-size: 13px;
+    background: rgb(255, 255, 255);
 }
+
+.content-title {
+    margin-top: 15px;
+}
+
+#label {
+    text-align: center;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.content, .content-title {
+    margin-left: 10px;
+}
+
+.content {
+    background: rgb(102, 102, 102);
+    color: #fff;
+    width: fit-content;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 10px;
+}
+
+.input {
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.buttons {
+    position: fixed;
+    margin-top: 13%;
+}
+
+#save {
+    margin-right: 15px;
+}
+
+.modal {
+    color: #fff;
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+    background-color: rebeccapurple;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: animate;
+    animation-duration: 800ms;
+}
+
+@keyframes animate {
+    from{
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+}
+
+.blur {
+    background-color: rgba(187, 187, 187, 0.589);
+    transition: all 0.25s ease-in-out;
+    position: absolute;
+    width: 100vh;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    display: none;
+    animation-duration: 800ms;
+}
+
+h1, p {
+    margin: 10px;
+}
+
+p {
+    margin-top: 30px;
+}
+
+
+
+.close-window {
+    background: rgb(182, 0, 0);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: right;
+    margin: 10px;
+}
+
+.close-window img {
+    width: 30px;
+    height: 30px;
+}
+
+.close-window:hover {
+    background-color: rgb(107, 0, 0);
+}
+
+.close-window:active {
+    background-color: rgb(211, 0, 0);
+}
+
+button {
+    background: rgb(102, 102, 102);
+    color: #fff;
+    border: 0;
+    border-radius: 2px;
+    padding: 3px;
+}
+
+button:hover {
+    background: rgb(75, 75, 75);
+    color: #fff;
+}
+
+button:active {
+    background: rgb(192, 192, 192);
+    color: #000;
+}
+
+table {
+    font-size: 15px;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+
