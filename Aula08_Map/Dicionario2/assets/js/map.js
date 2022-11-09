@@ -15,18 +15,18 @@
         return item.toString();  
     };
 
-    hasKey(key) { //verifica se existe alguma chave quando for inserir ou remover
-        return this.table[this.toStrFn(key)]!= null; // retorna false ou true
-    };
-
-    set(key, value) {
-        if(key!=null && value!=null) {
+    set(key, value1, value2) {
+        if(key!=null && value1!=null && value2!=null) {
             const tableKey = this.toStrFn(key);
-            this.table[tableKey] = new valuePair(key, value);
+            this.table[tableKey] = new valuePair(key, value1, value2);
             return true;
         }
         return false;
     }; 
+
+    hasKey(key) { //verifica se existe alguma chave quando for inserir ou remover
+        return this.table[this.toStrFn(key)]!= null; // retorna false ou true
+    };
 
     remove(key) {
         if(this.hasKey(key)) { // se houver a chave pesquisava, ele retornará true
@@ -38,7 +38,7 @@
 
     get(key) { // pega o elemento/informacao atraves/adicionado da/na chave no dicionario
         const valuePair = this.table[this.toStrFn(key)];
-        return valuePair == null ? undefined : valuePair.value;
+        return valuePair == null ? undefined : valuePair.value1 + ", " + valuePair.value2;
     };
 
     get2(key) {
@@ -65,18 +65,18 @@
         return this.keyValues().map(valuePair => valuePair.key); // map - serve para pegar cada objeto de keyvalores e vai atribuir aos valors que vamos trabalhar e posteriormente exibi-los. funciona como o for, intera e pega todos os elementos
     };
     
-    values() { // retorna todos os valores que estão presentes dentro do objeto/dicionário
-        return this.keyValues().map(valuePair => valuePair.value);
+    values1() { // retorna todos os valores que estão presentes dentro do objeto/dicionário
+        return this.keyValues().map(valuePair => [valuePair.value1, valuePair.value2]);
     };
     
     keyValues() { //retorna todas as informações dentro de um objeto - retorna tanto a chave e o valor ordenado  (dois conceitos)
-        return Object.values(this.table);  
+        return Object.values(this.table);
     };
     
     forEach(callbackFn) { // fazer a interação sobre todos os metodos da classe dicionario
           const valuePairs = this.keyValues();
           for(let i = 0; i < valuePairs.length; i++) {
-            const result = callbackFn(valuePairs[i].key, valuePairs[i].value);
+            const result = callbackFn(valuePairs[i].key, valuePairs[i].value1, valuePairs[i].value2);
             if (result === false) {
                 break;
             }
