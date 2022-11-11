@@ -1,12 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicionario 1</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="content-title">
+        <h1>Contacts - Dicionary 2</h1>
+    </div>
+    <div class="content">
+        <div class="input" id="input-name">
+            <label for="nome" id="label">Enter name</label>
+            <input type="text" id="name">
+        </div>
+        <div class="input" id="input-tel">
+            <label for="tel" id="label">Enter phone number</label>
+            <input type="text" id="tel">
+        </div>
+        <div class="buttons">
+            <button onclick="add()" id="save">Save Contact</button>
+            <button onclick="action()" id="list">Contact list</button>
+        </div>
+    </div>
+
+    <div class="blur" onclick="action()">
+    </div>
+
+    <div class="modal">
+        <div class="close-window" onclick="closeWindow()">
+        <img src="./assets/css/img/marca-x.png" alt="x-close" id="x-close">
+        </div>
+        <div class="info">
+            <h1>Contact List</h1>
+            <p id="res">
+            <table id="tabela">
+                <tr>
+                    <td>Name</td>
+                    <td>Number</td>
+                </tr>
+            </table>
+            </p>
+        </div>
+    </div>
+    <script src="./assets/js/valuePair.js"></script>
+    <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/testScript.js"></script>
+
 </body>
+
 </html>

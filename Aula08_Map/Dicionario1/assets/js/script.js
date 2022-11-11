@@ -1,20 +1,20 @@
+
 const dic = new Dictionary();
 const val = new valuePair();
 const nome = document.querySelector('#name');
-const email = document.querySelector('#email');
 const tel = document.querySelector('#tel');
 const res = document.querySelector('#res');
 const tabela = document.querySelector('#tabela');
 const contador = tabela.childElementCount;
 
 function add() {
-    if (nome.value=='' || email.value=='' && tel.value=='') {
+    if (nome.value=='' || tel.value=='') {
         alert(`Pending data`);
     } else {
         if (dic.hasKey(nome.value)) {
             console.log('Existing Contact');
         } else {
-            dic.set(nome.value, email.value, tel.value);
+            dic.set(nome.value, tel.value);
             console.log('Saved Contact');
             console.log(dic.get(nome.value))
             info();
@@ -31,17 +31,14 @@ function info () {
         tabela.style.display = 'block';
         let coluna1 = document.createElement('td');
         let coluna2 = document.createElement('td');
-        let coluna3 = document.createElement('td');
         let linha = document.createElement('tr');
-        dic.forEach((k,v,z)=>{
+        dic.forEach((k,v)=>{
             coluna1.innerHTML = `${k}`;
             coluna2.innerHTML = `${v}`;
-            coluna3.innerHTML = `${z}`;
         });
     
         linha.appendChild(coluna1);
         linha.appendChild(coluna2);
-        linha.appendChild(coluna3);
         tabela.appendChild(linha);
 }
 

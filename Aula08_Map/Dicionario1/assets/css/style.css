@@ -45,12 +45,17 @@ body {
 }
 
 .buttons {
+    top: 50%;
     position: fixed;
     margin-top: 13%;
 }
 
-#save {
+button {
     margin-right: 15px;
+}
+
+input {
+    font-size: 12px;
 }
 
 .modal {
@@ -98,13 +103,7 @@ p {
     margin-top: 30px;
 }
 
-input {
-    font-size: 12px;
-}
 
-#email {
-    width: 180px;
-}
 
 .close-window {
     background: rgb(182, 0, 0);
